@@ -1,8 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Strong } from "@quarkly/widgets";
+import { Theme, Link, Text, Strong, Icon, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { Override, StackItem, Stack, Section } from "@quarkly/components";
+import { MdArrowDownward } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
 		<Helmet>
@@ -116,6 +117,58 @@ export default (() => {
 			>
 				Everyone is full of sh*t!
 			</Text>
+			<Text
+				as="p"
+				margin="16px 0"
+				font="--base"
+				max-width="1000px"
+				color="#000000"
+				width="1200px"
+			>
+				<Strong
+					overflow-wrap="normal"
+					word-break="normal"
+					white-space="normal"
+					text-indent="0"
+					text-overflow="clip"
+					hyphens="manual"
+				>
+					Simon Moore is an award-winning creative designer and Google-certified digital marketing expert.
+				</Strong>
+				{" "}
+				<br />
+				<br />
+				He has a wealth of experience and his grey hair is the proof of it. That, and his three children: two daughters and a French bulldog. He built his first computer with his dad in the golden age of the Internet: the glorious dial-up modem era. He took his first steps into the world of graphic design in 1999.{" "}
+				<br />
+				<br />
+				<br />
+				Growing up alongside the industry in the last twenty years has given him an acute understanding of how little its ground keeps still. In a landscape that doesn’t stop moving, it is vital to stay ahead of the curve and keep at the forefront of the latest trends and technologies.
+			</Text>
+		</Section>
+		<Section
+			background="linear-gradient(0deg,rgba(4, 8, 12, 0.6) 0%,rgba(4, 8, 12, 0.6) 100%),--color-darkL2 url(https://images.unsplash.com/photo-1517909277968-946dd06adf1e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0MjIzN30&w=2000) center/cover"
+			padding="64px 0"
+			sm-padding="40px 0"
+			color="--light"
+			font="--base"
+		>
+			<Stack>
+				<StackItem width="75%" lg-width="100%">
+					<Override slot="StackItemContent" flex-direction="column" />
+					<Text color="--lightD2" letter-spacing="1px" text-transform="uppercase" margin="0">
+						Excellence in everything
+					</Text>
+					<Text as="h1" font="--headline1" md-font="--headline2" margin="10px 0">
+						Striving for perfection in everything we do. Unparalleled service for everyone.
+					</Text>
+				</StackItem>
+			</Stack>
+			<Box text-align="center" margin="96px 0 0 0">
+				<Text margin="8px 0" text-transform="uppercase">
+					Who we are
+				</Text>
+				<Icon category="md" margin="0 auto" icon={MdArrowDownward} />
+			</Box>
 		</Section>
 		<Link
 			font={"--capture"}
